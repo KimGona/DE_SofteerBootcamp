@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 import json
+import pycountry_convert as pc
 
 ## 로그 기록 함수
 def log_message(message, log_file="./Missions/Week01/etl_project_log.txt"):
@@ -74,6 +75,20 @@ def transform_data(file_name):
     log_message("Cleaned and transformed the GDP data.")
     return df
 
+
+# 나라->Region 변환 함수
+def country_to_continent(country_name):
+    try:
+        # 국가 이름을 대륙 이름으로 변환
+        country_alpha2 = pc.country_name_to_country_alpha2(country_name)
+        country_continent_code = pc.country_alpha2_to_continent_code(country_alpha2)
+        country_continent_name = pc.convert_continent_code_to_continent_name(country_continent_code)
+        return country_continent_name
+    except KeyError:
+        # KeyError 발생 시 NaN 반환
+        return np.nan
+
+
 ## 화면 출력(GDP가 100B USD이상이 되는 국가만)
 def show_data1(df, val):
 
@@ -84,16 +99,39 @@ def show_data1(df, val):
     print(df1)
 
 ## 화면 출력(각 Region별로 top5 국가의 GDP 평균을 구해서)
-#def show_data2(df):
+def show_data2(df):
+    df['Region']=np.nan
+    # 벡터화 처리
+    df['Region'] = df['Country'].apply(country_to_continent)
+    # GDP 기준으로 내림차순 정렬
+    sorted_df = df.sort_values(by="GDP_USD_billion", ascending=False)
+
+    # 각 Region별 상위 5개 국가 선택
+    top5_per_region = (
+        sorted_df.groupby("Region", group_keys=False)
+                .apply(lambda x: x.nlargest(5, "GDP_USD_billion"))
+    )
+
+    # Region별 상위 5개 국가의 GDP 평균 계산
+    region_top5_avg_gdp = top5_per_region.groupby("Region")["GDP_USD_billion"].mean()
+    
+    # 결과 출력
+    print(region_top5_avg_gdp)
+    log_message(f"df2 dataset contains {len(region_top5_avg_gdp)} rows.")
 
 def main():
 
     log_message("Start ETL Process")
 
+    #url->html->table에서 정보 추출해서 json 파일로 저장
     extract_json(url = "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29", file_name="./Missions/Week01/Countries_by_GDP.json")
+
+    #json파일 불러와서 데이터 정제
     df = transform_data("./Missions/Week01/Countries_by_GDP.json")
+    
+    #정제한 데이터 바탕으로 데이터 가공하여 출력
     show_data1(df,100)
-    #show_data2(df)
+    show_data2(df)
 
     log_message("ETL process completed successfully.")
 
