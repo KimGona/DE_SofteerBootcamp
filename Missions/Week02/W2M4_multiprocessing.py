@@ -6,15 +6,15 @@ import time
 def work(q1,q2,i):
     while not q1.empty(): ###while 대신에 처리할 방법 없는지 찾아보기
         try:
-            a = q1.get_nowait()
-
-        except q1.empty():
-            print("Queue is empty")
+            a = q1.get_nowait() ###get_nowait()를 사용해야 하는 이유는 뭘까?
+        except Exception as e:
+            print(f"Process-{i}: Error encountered: {e}")
+            break
         else:
             time.sleep(0.5)
             message = f'Task No {a} is done by Process-{i}'
             q2.put(message)
-            print(message)
+            #print(message)
 
 def pop(q):
     i = 0
@@ -40,5 +40,8 @@ if __name__ == '__main__':
 
     for process in processes:
         process.join()
+
+    while not tasks_that_are_done.empty():
+        print(tasks_that_are_done.get())
 
 
