@@ -4,7 +4,7 @@ import time
 
      
 def work(q1,q2,i):
-    while not q1.empty(): ##q1에 하나라도 있으면
+    while not q1.empty(): ##q1에 요소가 하나라도 있으면
         try:
             a = q1.get_nowait() ###get_nowait()를 사용해야 하는 이유는 뭘까? empty가 정확하지 않음. -> 큐에 아무것도 없어도 일단 코드 실행
         except Exception as e:
