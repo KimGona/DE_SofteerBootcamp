@@ -96,12 +96,12 @@
         "GDP": "638,780"
     },
     {
-        "Country": "Ireland",
-        "GDP": "587,225"
+        "Country": "Argentina",
+        "GDP": "604,201"
     },
     {
-        "Country": "Argentina",
-        "GDP": "574,201"
+        "Country": "Ireland",
+        "GDP": "587,225"
     },
     {
         "Country": "United Arab Emirates",
@@ -124,6 +124,10 @@
         "GDP": "545,341"
     },
     {
+        "Country": "Vietnam",
+        "GDP": "506,426"
+    },
+    {
         "Country": "Norway",
         "GDP": "503,466"
     },
@@ -133,11 +137,7 @@
     },
     {
         "Country": "Philippines",
-        "GDP": "471,516"
-    },
-    {
-        "Country": "Vietnam",
-        "GDP": "468,400"
+        "GDP": "507,670"
     },
     {
         "Country": "Iran",
@@ -145,7 +145,11 @@
     },
     {
         "Country": "Bangladesh",
-        "GDP": "451,856"
+        "GDP": "455,856"
+    },
+    {
+        "Country": "Czech Republic",
+        "GDP": "452,233"
     },
     {
         "Country": "Denmark",
@@ -180,16 +184,16 @@
         "GDP": "362,240"
     },
     {
-        "Country": "Czech Republic",
-        "GDP": "360,233"
-    },
-    {
         "Country": "Finland",
         "GDP": "319,989"
     },
     {
         "Country": "Portugal",
         "GDP": "319,934"
+    },
+    {
+        "Country": "Hungary",
+        "GDP": "312,619"
     },
     {
         "Country": "Kazakhstan",
@@ -216,16 +220,16 @@
         "GDP": "262,924"
     },
     {
-        "Country": "Hungary",
-        "GDP": "245,619"
+        "Country": "Qatar",
+        "GDP": "240,217"
     },
     {
-        "Country": "Qatar",
-        "GDP": "226,217"
+        "Country": "Ethiopia",
+        "GDP": "230,031"
     },
     {
         "Country": "Nigeria",
-        "GDP": "194,955"
+        "GDP": "199,720"
     },
     {
         "Country": "Ukraine",
@@ -244,16 +248,20 @@
         "GDP": "—"
     },
     {
-        "Country": "Ethiopia",
-        "GDP": "145,031"
-    },
-    {
         "Country": "Slovakia",
         "GDP": "142,617"
     },
     {
         "Country": "Dominican Republic",
         "GDP": "126,238"
+    },
+    {
+        "Country": "Uzbekistan",
+        "GDP": "125,511"
+    },
+    {
+        "Country": "Bulgaria",
+        "GDP": "123,425"
     },
     {
         "Country": "Ecuador",
@@ -272,20 +280,12 @@
         "GDP": "113,286"
     },
     {
-        "Country": "Uzbekistan",
-        "GDP": "112,653"
-    },
-    {
         "Country": "Guatemala",
         "GDP": "112,369"
     },
     {
         "Country": "Oman",
-        "GDP": "109,993"
-    },
-    {
-        "Country": "Bulgaria",
-        "GDP": "108,425"
+        "GDP": "110,993"
     },
     {
         "Country": "Venezuela",
@@ -365,7 +365,7 @@
     },
     {
         "Country": "Macau",
-        "GDP": "53,447"
+        "GDP": "55,447"
     },
     {
         "Country": "Cameroon",
@@ -444,6 +444,10 @@
         "GDP": "31,716"
     },
     {
+        "Country": "Sudan",
+        "GDP": "30,873"
+    },
+    {
         "Country": "Zambia",
         "GDP": "29,872"
     },
@@ -454,10 +458,6 @@
     {
         "Country": "Trinidad and Tobago",
         "GDP": "28,365"
-    },
-    {
-        "Country": "Sudan",
-        "GDP": "26,865"
     },
     {
         "Country": "Guinea",
@@ -556,16 +556,16 @@
         "GDP": "16,359"
     },
     {
+        "Country": "Brunei",
+        "GDP": "15,988"
+    },
+    {
         "Country": "North Macedonia",
         "GDP": "15,873"
     },
     {
         "Country": "Kyrgyzstan",
         "GDP": "15,770"
-    },
-    {
-        "Country": "Brunei",
-        "GDP": "15,510"
     },
     {
         "Country": "Congo",

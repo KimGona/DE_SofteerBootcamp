@@ -304,3 +304,100 @@
 2025-January-08-15-42-01, Cleaned and transformed the GDP data.
 2025-January-08-15-42-01, Load df data to sqlite3 DB
 2025-January-08-15-42-01, ETL process completed successfully.
+2025-January-17-12-00-28, Start ETL Process
+2025-January-17-12-00-29, Fetched HTML from the URL.
+2025-January-17-12-00-29, Parsed HTML with BeautifulSoup.
+2025-January-17-12-00-29, Found the GDP table in the HTML.
+2025-January-17-12-00-29, Extracted 209 rows from the table.
+2025-January-17-12-01-05, Start ETL Process
+2025-January-17-12-01-05, Fetched HTML from the URL.
+2025-January-17-12-01-05, Parsed HTML with BeautifulSoup.
+2025-January-17-12-01-05, Found the GDP table in the HTML.
+2025-January-17-12-01-05, Extracted 209 rows from the table.
+2025-January-17-12-01-33, Start ETL Process
+2025-January-17-12-01-33, Fetched HTML from the URL.
+2025-January-17-12-01-33, Parsed HTML with BeautifulSoup.
+2025-January-17-12-01-33, Found the GDP table in the HTML.
+2025-January-17-12-01-33, Extracted 209 rows from the table.
+2025-January-17-12-03-47, Start ETL Process
+2025-January-17-12-03-48, Fetched HTML from the URL.
+2025-January-17-12-03-48, Parsed HTML with BeautifulSoup.
+2025-January-17-12-03-48, Found the GDP table in the HTML.
+2025-January-17-12-03-48, Extracted 209 rows from the table.
+2025-January-17-12-04-11, Start ETL Process
+2025-January-17-12-04-12, Fetched HTML from the URL.
+2025-January-17-12-04-12, Parsed HTML with BeautifulSoup.
+2025-January-17-12-04-12, Found the GDP table in the HTML.
+2025-January-17-12-04-12, Extracted 209 rows from the table.
+2025-January-17-12-04-12, Converted data to Pandas DataFrame.
+2025-January-17-12-04-12, Cleaned and transformed the GDP data.
+2025-January-17-12-04-12, Data successfully saved
+2025-January-17-12-04-12, df1 dataset contains 72 rows.
+2025-January-17-12-04-12, df2 dataset contains 6 rows.
+2025-January-17-12-04-12, ETL process completed successfully.
+2025-January-17-12-06-13, Start ETL Process
+2025-January-17-12-06-14, Fetched HTML from the URL.
+2025-January-17-12-06-14, Parsed HTML with BeautifulSoup.
+2025-January-17-12-06-14, Found the GDP table in the HTML.
+2025-January-17-12-06-14, Extracted 209 rows from the table.
+2025-January-17-12-06-14, Converted data to Pandas DataFrame.
+2025-January-17-12-06-14, Cleaned and transformed the GDP data.
+2025-January-17-12-06-14, Data successfully saved
+2025-January-17-12-06-14, df1 dataset contains 72 rows.
+2025-January-17-12-06-14, df2 dataset contains 6 rows.
+2025-January-17-12-06-14, ETL process completed successfully.
+2025-January-17-12-07-16, Start ETL Process
+2025-January-17-12-07-17, Fetched HTML from the URL.
+2025-January-17-12-07-17, Parsed HTML with BeautifulSoup.
+2025-January-17-12-07-17, Found the GDP table in the HTML.
+2025-January-17-12-07-17, Extracted 209 rows from the table.
+2025-January-17-12-07-17, Converted data to Pandas DataFrame.
+2025-January-17-12-07-17, Cleaned and transformed the GDP data.
+2025-January-17-12-07-17, Data successfully saved
+2025-January-17-12-07-17, df1 dataset contains 72 rows.
+2025-January-17-12-07-17, df2 dataset contains 6 rows.
+2025-January-17-12-07-17, ETL process completed successfully.
+2025-January-17-12-13-19, Start ETL Process
+2025-January-17-12-13-20, Fetched HTML from the URL.
+2025-January-17-12-13-20, Parsed HTML with BeautifulSoup.
+2025-January-17-12-13-20, Found the GDP table in the HTML.
+2025-January-17-12-13-20, Extracted 209 rows from the table.
+2025-January-17-12-13-20, Converted data to Pandas DataFrame.
+2025-January-17-12-13-20, Cleaned and transformed the GDP data.
+2025-January-17-12-13-20, Data successfully saved
+2025-January-17-12-13-20, df1 dataset contains 72 rows.
+2025-January-17-12-13-20, df2 dataset contains 6 rows.
+2025-January-17-12-13-20, ETL process completed successfully.
+2025-January-17-12-14-03, Start ETL Process
+2025-January-17-12-14-04, Fetched HTML from the URL.
+2025-January-17-12-14-04, Parsed HTML with BeautifulSoup.
+2025-January-17-12-14-04, Found the GDP table in the HTML.
+2025-January-17-12-14-04, Extracted 209 rows from the table.
+2025-January-17-12-14-04, Converted data to Pandas DataFrame.
+2025-January-17-12-14-04, Cleaned and transformed the GDP data.
+2025-January-17-12-14-04, Data successfully saved
+2025-January-17-12-14-04, df1 dataset contains 72 rows.
+2025-January-17-12-14-04, df2 dataset contains 6 rows.
+2025-January-17-12-14-04, ETL process completed successfully.
+2025-January-17-12-15-00, Start ETL Process
+2025-January-17-12-15-01, Fetched HTML from the URL.
+2025-January-17-12-15-01, Parsed HTML with BeautifulSoup.
+2025-January-17-12-15-01, Found the GDP table in the HTML.
+2025-January-17-12-15-01, Extracted 209 rows from the table.
+2025-January-17-12-15-01, Converted data to Pandas DataFrame.
+2025-January-17-12-15-01, Cleaned and transformed the GDP data.
+2025-January-17-12-15-01, Data successfully saved
+2025-January-17-12-15-01, df1 dataset contains 72 rows.
+2025-January-17-12-15-01, df2 dataset contains 6 rows.
+2025-January-17-12-15-01, ETL process completed successfully.
+2025-January-17-12-19-31, Start ETL Process
+2025-January-17-12-19-31, Fetched HTML from the URL.
+2025-January-17-12-19-31, Parsed HTML with BeautifulSoup.
+2025-January-17-12-19-31, Found the GDP table in the HTML.
+2025-January-17-12-19-31, Extracted 209 rows from the table.
+2025-January-17-12-19-31, Converted data to Pandas DataFrame.
+2025-January-17-12-19-31, Cleaned and transformed the GDP data.
+2025-January-17-12-19-31, Load df data to sqlite3 DB
+2025-January-17-12-19-31, result1 dataset contains 72 rows.
+2025-January-17-12-19-31, result2 dataset contains 6 rows.
+2025-January-17-12-19-31, ETL process completed successfully.
