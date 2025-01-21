@@ -4,6 +4,9 @@
 - https://dlcdn.apache.org/hadoop/common/hadoop-3.4.0/
 - hadoop-3.4.0.tar.gz 파일 다운로드 받기
 
++) 맥 설정 추가하기 </br>
+https://velog.io/@boyunj0226/M1-맥에서-Hadoop-Spark-설치하기</br>
+
 
 2. 도커 이미지 빌드
 - docker build -t hadoop-single .
