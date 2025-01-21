@@ -17,13 +17,16 @@
 5. 컨테이너 내부에서 hdfs 초기화(처음에만 하기)
 - hdfs namenode -format
 
+
+- service ssh status로 ssh 연결되어 있는지 확인하기
+- sudo service ssh start
+
 6. 하둡 서비스 시작
 - start-dfs.sh
 
 - jps #서비스 상태 확인
 
 - hdfs dfs -mkdir /user #폴더 생성
-
 
 - hdfs dfs -ls /
 
