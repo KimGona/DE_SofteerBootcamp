@@ -111,5 +111,18 @@ hdfs dfs -put /tmp/Harry_Potter_1.txt /tmp/
 - HDFS에 업로드된 파일 확인
 hdfs dfs -ls /tmp/
 
+- mapper과 reducer 파일 컨테이너로 복사
+docker cp mapper.py hadoop-master:/tmp/
+docker cp reducer.py hadoop-master:/tmp/
 
+hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar \
+    -mapper '/usr/bin/python3 /tmp/mapper.py' \
+    -reducer '/usr/bin/python3 /tmp/reducer.py' \
+    -input /tmp/Harry_Potter_1.txt \
+    -output /tmp/output
+
+(-input과 -output 경로는 HDFS 경로여야 한다.)
+
+chmod +x /tmp/mapper.py
+chmod +x /tmp/reducer.py
 
