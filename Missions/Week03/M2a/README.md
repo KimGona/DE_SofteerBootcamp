@@ -96,3 +96,20 @@ Estimated value of Pi is 3.14250000000000000000
 컨테이너 종료:
 docker-compose down
 
+## M3 이어서 하기
+- 로컬에서 컨테이너로 파일을 복사:
+docker cp Harry_Potter_1.txt hadoop-master:/tmp/
+
+텍스트 파일 출처: https://github.com/amephraim/nlp/blob/master/texts/J.%20K.%20Rowling%20-%20Harry%20Potter%201%20-%20Sorcerer's%20Stone.txt
+
+- 컨테이너 내부로 접속
+docker exec -it hadoop-master bash
+
+- HDFS로 파일 업로드
+hdfs dfs -put /tmp/Harry_Potter_1.txt /tmp/
+
+- HDFS에 업로드된 파일 확인
+hdfs dfs -ls /tmp/
+
+
+

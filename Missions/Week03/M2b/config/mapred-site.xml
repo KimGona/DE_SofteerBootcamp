@@ -4,6 +4,10 @@
         <value>yarn</value>
     </property>
     <property>
+        <name>mapreduce.task.io.sort.mb</name>
+        <value>100</value>
+    </property>
+    <property>
         <name>yarn.app.mapreduce.am.env</name>
         <value>HADOOP_MAPRED_HOME=/usr/local/hadoop</value>
     </property>

@@ -41,10 +41,10 @@ RUN tar -xvzf /tmp/hadoop-3.4.0.tar.gz -C /usr/local/ \
     && rm /tmp/hadoop-3.4.0.tar.gz
 
 # Copy configuration files
-COPY core-site.xml $HADOOP_HOME/etc/hadoop/
-COPY hdfs-site.xml $HADOOP_HOME/etc/hadoop/
-COPY mapred-site.xml $HADOOP_HOME/etc/hadoop/
-COPY yarn-site.xml $HADOOP_HOME/etc/hadoop/
+COPY ./config/core-site.xml $HADOOP_HOME/etc/hadoop/
+COPY ./config/hdfs-site.xml $HADOOP_HOME/etc/hadoop/
+COPY ./config/mapred-site.xml $HADOOP_HOME/etc/hadoop/
+COPY ./config/yarn-site.xml $HADOOP_HOME/etc/hadoop/
 
 # Set permissions for Hadoop directory
 RUN chown -R hadoop:hadoop $HADOOP_HOME
@@ -66,3 +66,4 @@ EXPOSE 9870 9864 9000 8088 8042
 
 # Start SSH and Hadoop services
 CMD ["/bin/bash", "-c", "service ssh start; /home/hadoop/start-hadoop.sh; tail -f /dev/null"]
+
