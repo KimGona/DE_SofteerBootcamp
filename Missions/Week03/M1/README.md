@@ -1,7 +1,7 @@
 # Week03 Mission1 실행 instruction
 
-1. 하둡 로컬에 다운로드
-- https://dlcdn.apache.org/hadoop/common/hadoop-3.4.0/
+1. 로컬에 하둡 다운로드 받기
+- https://dlcdn.apache.org/hadoop/common/hadoop-3.4.0/ 에서
 - hadoop-3.4.0.tar.gz 파일 다운로드 받기
 
 +) 맥 설정 추가하기 </br>
@@ -20,25 +20,26 @@ https://velog.io/@boyunj0226/M1-맥에서-Hadoop-Spark-설치하기</br>
 5. 컨테이너 내부에서 hdfs 초기화(처음에만 하기)
 - hdfs namenode -format
 
-
+#ssh 연결 확인 및 연결하기
 - service ssh status로 ssh 연결되어 있는지 확인하기
 - sudo service ssh start
 
 6. 하둡 서비스 시작
 - start-dfs.sh
+#서비스 상태 확인
+- jps 
 
-- jps #서비스 상태 확인
-
-- hdfs dfs -mkdir /user #폴더 생성
-
+7. 하둡 operations
+#폴더 생성
+- hdfs dfs -mkdir /user 
 - hdfs dfs -ls /
-
-- echo "Hello Hadoop" > sample.txt #파일 만들기
-
-- hdfs dfs -put sample.txt /user/kga  #파일 업로드     
-
-- hdfs dfs -ls /user/kga #파일 확인
-
-- hdfs dfs -get /user/kga/sample.txt downloaded_sample.txt #파일 다운로드
+#파일 만들기
+- echo "Hello Hadoop" > sample.txt 
+#HDFS로 파일 업로드   
+- hdfs dfs -put sample.txt /user/kga    
+#파일 확인
+- hdfs dfs -ls /user/kga 
+#파일 다운로드
+- hdfs dfs -get /user/kga/sample.txt downloaded_sample.txt 
 
 - http://localhost:9870 실행해보기
