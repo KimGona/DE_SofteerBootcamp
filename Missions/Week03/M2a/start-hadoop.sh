@@ -9,6 +9,11 @@ if [ "$HOSTNAME" == "master" ]; then
   $HADOOP_HOME/sbin/start-yarn.sh
 else
   $HADOOP_HOME/bin/hdfs datanode
+  
+  #아래로 바꿔서도 해보기
+  # Start DataNode and NodeManager on worker nodes
+  #$HADOOP_HOME/bin/hdfs datanode &
+  #$HADOOP_HOME/bin/yarn nodemanager &
 fi
 
 # Keep container running

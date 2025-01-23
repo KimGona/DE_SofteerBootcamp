@@ -48,7 +48,9 @@ $HADOOP_HOME/bin/hdfs namenode</br>
 
 
 ## 하둡 worker에서
-- $HADOOP_HOME/sbin/yarn-daemon.sh start nodemanager
+- $HADOOP_HOME/sbin/yarn-daemon.sh start nodemanager</br>
+#DataNode를 수동으로 다시 시작하고 싶다면
+- $HADOOP_HOME/bin/hdfs --daemon start datanode </br>
 
 - jps 로 SecondaryNameNode, NodeManager 확인하기
 
@@ -80,7 +82,7 @@ hdfs dfs -get /user/test/testfile.txt /tmp/test_file_downloaded.txt
 cat /tmp/test_file_downloaded.txt
 
 
-## yarn 작동하는지 테스트 코드 실행(마스터에서)
+## yarn 작동하는지 테스트 코드 실행(마스터에서, worker도 실행해야 함)
 hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar pi 16 1000 </br>
 
 결과: 아래처럼 나온다</br>
@@ -109,6 +111,18 @@ hdfs dfs -ls /tmp/</br>
 docker cp mapper.py hadoop-master:/tmp/</br>
 docker cp reducer.py hadoop-master:/tmp/</br>
 
+- mapper 함수 잘 실행되는지 확인</br>
+echo "Harry Potter and the Sorcerer's Stone" | /usr/bin/python3 /tmp/mapper.py</br>
+
+- reducer 함수 잘 실행되는지 확인</br>
+echo -e "apple\t1\nbanana\t1\napple\t1\norange\t1\nbanana\t1" | /usr/bin/python3 /tmp/reducer.py</br>
+
+- mapper, reducer 파일 사용 권한 주기
+sudo chmod +x /tmp/mapper.py</br>
+sudo chmod +x /tmp/reducer.py</br>
+
+-- 여기까지 실행됨</br>----------
+
 hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar \
     -mapper '/usr/bin/python3 /tmp/mapper.py' \
     -reducer '/usr/bin/python3 /tmp/reducer.py' \
@@ -116,6 +130,5 @@ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar \
     -output /tmp/output</br>
 (-input과 -output 경로는 HDFS 경로여야 한다.)</br>
 
-chmod +x /tmp/mapper.py</br>
-chmod +x /tmp/reducer.py</br>
+
 
