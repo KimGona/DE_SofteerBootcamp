@@ -124,10 +124,13 @@ sudo chmod +x /tmp/reducer.py</br>
 -- 여기까지 실행됨</br>----------
 
 hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar \
-    -mapper '/usr/bin/python3 /tmp/mapper.py' \
-    -reducer '/usr/bin/python3 /tmp/reducer.py' \
+    -file /tmp/mapper.py \
+    -mapper 'python3 mapper.py' \
+    -file /tmp/reducer.py \
+    -reducer 'python3 reducer.py' \
     -input /tmp/Harry_Potter_1.txt \
     -output /tmp/output</br>
+
 (-input과 -output 경로는 HDFS 경로여야 한다.)</br>
 
 
