@@ -7,6 +7,8 @@ services:
     ports:
       - "8080:8080"  # Spark Web UI
       - "7077:7077"  # Spark master port
+    volumes:
+      - ./output:/opt/spark/output  # 호스트의 ./output 폴더와 컨테이너 내부 /opt/spark/output 연결
     environment:
       - SPARK_MODE=master
       - SPARK_MASTER_HOST=spark-master
