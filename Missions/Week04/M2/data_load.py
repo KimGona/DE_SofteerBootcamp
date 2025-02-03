@@ -44,16 +44,7 @@ df = df.filter((col("total_amount") > 0))
 # df_cleaned = df.filter(~((col("fare_amount") > 0) & (col("payment_type") == 3))) 기본 요금이 0보다 큰데 결제 유형이 무료 승차인 데이터 삭제
 df = df.filter(col("passenger_count") > 0) 
 
-# # [새로운 컬럼 생성]
-# # 하차시간 - 탑승시간을 초 단위 계산: 평균 여행 시간 분석을 위해
-# # 위 값을 분단위로 변환: 분 단위 시각화로 가독성 향상을 위해
-# # 탑승시간에서 시간만 추출: peak hour분석용
-# df = df.withColumn("trip_duration_sec",
-#                    unix_timestamp(col("tpep_dropoff_datetime")) - unix_timestamp(col("tpep_pickup_datetime"))
-#                   )
-# df = df.filter((col("trip_duration_sec") < 18000)) # 비정상 데이터 제거 - 이동이 5시간 이상인 데이터 제거
-# df = df.withColumn("trip_duration_min", col("trip_duration_sec") / 60.0)
-# df = df.withColumn("pickup_hour", hour("tpep_pickup_datetime"))
+
 
 # 정제한 데이터 저장
 cleaned_parquet_path = "./output/green_tripdata_2024.parquet"
