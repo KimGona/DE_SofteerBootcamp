@@ -40,7 +40,8 @@ rdd_filtered = rdd_filtered.filter(
 )
 ## Data transformation
 
-
+# 여기에도 캐시 사용하면 빨라진다.
+#rdd_filtered.cache()
 
 ## Data Aggregation
 
@@ -49,7 +50,7 @@ total_trips = rdd_filtered.count()
 print(f"total number of trips: {total_trips}")
 
 # 총 수익
-total_revenue = rdd_filtered.map(lambda row: row["fare_amount"]).sum()
+total_revenue = rdd_filtered.map(lambda row: row["total_amount"]).sum()
 print(f"total revenue: ${total_revenue:.2f}")
 
 # 평균 이동 거리
@@ -69,7 +70,7 @@ for date, count in sorted(trips_per_day):
 
 # 일별 총 수익
 revenue_per_day = (
-    rdd_filtered.map(lambda row: (row["tpep_pickup_datetime"].date(), row["fare_amount"]))
+    rdd_filtered.map(lambda row: (row["tpep_pickup_datetime"].date(), row["total_amount"]))
                .reduceByKey(lambda a, b: a + b)
                .collect()
 )
@@ -94,5 +95,5 @@ print("데이터 정제 완료, 저장 경로:")
 print(f" - Parquet: {cleaned_parquet_path}")
 print(f" - CSV: {cleaned_csv_path}")
 
-time.sleep(600)  # Spark UI 유지
+time.sleep(1000)  # Spark UI 유지
 spark.stop()
